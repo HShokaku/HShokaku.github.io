@@ -185,6 +185,35 @@
 <p><img src="/2021/06/09/%E5%88%A9%E7%94%A8%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%9E%84%E5%BB%BA%E4%BA%BA%E4%BD%93%E5%B0%8F%E8%82%A0%E5%90%B8%E6%94%B6%E5%88%86%E7%B1%BB%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B/RandomForest-MACCS%E8%AE%AD%E7%BB%83%E9%9B%86.jpg" alt="RandomForest-MACCS训练集"></p>
 <p><img src="/2021/06/09/%E5%88%A9%E7%94%A8%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%9E%84%E5%BB%BA%E4%BA%BA%E4%BD%93%E5%B0%8F%E8%82%A0%E5%90%B8%E6%94%B6%E5%88%86%E7%B1%BB%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B/RandomForest-PubChem%E6%B5%8B%E8%AF%95%E9%9B%86_ROC.jpg" alt="RandomForest-PubChem测试集_ROC"></p>
 <p><img src="/2021/06/09/%E5%88%A9%E7%94%A8%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%9E%84%E5%BB%BA%E4%BA%BA%E4%BD%93%E5%B0%8F%E8%82%A0%E5%90%B8%E6%94%B6%E5%88%86%E7%B1%BB%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B/RandomForest-PubChem%E8%AE%AD%E7%BB%83%E9%9B%86_ROC.jpg" alt="RandomForest-PubChem训练集_ROC"></p>
+<h1 id="四、实验结果"><a href="#四、实验结果" class="headerlink" title="四、实验结果"></a>四、实验结果</h1><table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">RandomForest-MACCS</th>
+<th align="center">RandomForest-PubChem</th>
+<th align="center">NaiveBayes-MACCS</th>
+<th align="center">NaiveBayes-PubChem</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">精确率</td>
+<td align="center">98.5%</td>
+<td align="center">93.9%</td>
+<td align="center">95.7%</td>
+<td align="center">95.4%</td>
+</tr>
+<tr>
+<td align="center">ROC Area</td>
+<td align="center">0.9957</td>
+<td align="center">0.9043</td>
+<td align="center">0.9720</td>
+<td align="center">0.8204</td>
+</tr>
+</tbody></table>
+<hr>
+<p>将四组数据对比发现，当使用MACCS的分子指纹和RandomForest的机器学习方法进行训练预测时，能够得到更好的结果，而且精确率十分高，说明偏差小</p>
+<h1 id="五、心得与体会"><a href="#五、心得与体会" class="headerlink" title="五、心得与体会"></a>五、心得与体会</h1><p>分子指纹是用二进制码表示的分子结构，由于机器语言本身就是二进制，所以计算机处理分子指纹非常快；同时，分子指纹是采用分子片段描述分子，这样就与分子结构直接管理，从而可以方便解释相关的生物效应。</p>
+<p>作为非计算机专业的学生，对于算法原理的理解较为困难。如果能够更深入层次的理解算法的原理，结合自身专业知识或许可以对决策有更好的选择。</p>
 
       
 
