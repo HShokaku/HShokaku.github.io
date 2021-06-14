@@ -8,15 +8,31 @@
   <link rel="dns-prefetch" href="https://hshokaku.github.io">
   <title>药效团模型构建及数据库检索 | 欢迎来到我的博客！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="一、实验目的通过Schrödinger软件的Phase模块构建组胺H2受体激动剂的药效团模型，掌握构建药效团模型的基本步骤和方法">
+<meta property="og:type" content="article">
 <meta property="og:title" content="药效团模型构建及数据库检索">
 <meta property="og:url" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/index.html">
 <meta property="og:site_name" content="欢迎来到我的博客！">
+<meta property="og:description" content="一、实验目的通过Schrödinger软件的Phase模块构建组胺H2受体激动剂的药效团模型，掌握构建药效团模型的基本步骤和方法">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/1.jpg">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/2.jpg">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/3.jpg">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/4.jpg">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/5.jpg">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/6.jpg">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/7.jpg">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/8.jpg">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/9.jpg">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/11.jpg">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/10.jpg">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/12.jpg">
+<meta property="og:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/13.jpg">
 <meta property="article:published_time" content="2021-06-12T07:52:21.000Z">
-<meta property="article:modified_time" content="2021-06-12T07:52:21.908Z">
+<meta property="article:modified_time" content="2021-06-14T01:47:46.530Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hshokaku.github.io/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="欢迎来到我的博客！" type="application/atom+xml">
   
@@ -152,7 +168,61 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h1><p>通过Schrödinger软件的Phase模块构建组胺H<sub>2</sub>受体激动剂的药效团模型，掌握构建药效团模型的基本步骤和方法</p>
+<span id="more"></span>
+
+<h1 id="二、实验材料"><a href="#二、实验材料" class="headerlink" title="二、实验材料"></a>二、实验材料</h1><p>文献中收集得到的62个H<sub>2</sub>受体激动剂小分子<br>Schrödinger软件中的Phase模块</p>
+<h1 id="三、实验过程"><a href="#三、实验过程" class="headerlink" title="三、实验过程"></a>三、实验过程</h1><h2 id="1-实验准备"><a href="#1-实验准备" class="headerlink" title="1.实验准备"></a>1.实验准备</h2><p>将准备好的小分子结构和活性数据的sdf数据拷贝至工作目录，并启动maestro</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">%</span><span class="bash"> mkdir pharmacophore</span></span><br><span class="line"><span class="meta">%</span><span class="bash"> <span class="built_in">cd</span> pharmacophore</span></span><br><span class="line"><span class="meta">%</span><span class="bash"> cp /home/applic/pharm_ligprep.maegz ./		<span class="comment">#未生成构象，可自己尝试</span></span></span><br><span class="line"><span class="meta">%</span><span class="bash"> cp /home/applic/pharm_confgen.maegz ./		<span class="comment">#已预先生成构象</span></span></span><br><span class="line"><span class="meta">%</span><span class="bash"> maestro</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-药效团模型构建"><a href="#2-药效团模型构建" class="headerlink" title="2.药效团模型构建"></a>2.药效团模型构建</h2><p>①    打开Maestro界面，<code>Project</code>——&gt;<code>Save as</code>，储存为pharmacophore.prj</p>
+<p>②    <code>Application</code>——&gt;<code>Phase</code>——&gt;<code>Develop Common Pharmacophore Hypotheses</code></p>
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/1.jpg" style="zoom: 50%;">
+
+<p>③    <code>Add ligands</code>——&gt;<code>From file</code>导入组胺H<sub>2</sub>受体激动剂文件pharm_ligprep.maegz，在弹出的对话框中活性值选择active一栏</p>
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/2.jpg" style="zoom:50%;">
+
+<p>④    利用<code>phase</code>模块自带的构象产生器产生构象，点击<code>Generate Conformers</code>弹出对话框</p>
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/3.jpg" style="zoom:50%;">
+
+<p>将参数改为如下设置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Number of conformers per rotatable bond: 50</span><br><span class="line">Maximum number of conformers per structure: 250</span><br><span class="line">Sampling: rapid </span><br><span class="line">Preprocess steps: 50</span><br><span class="line">Postpreocess steps: 50</span><br><span class="line">Solvation treatment: Distance-dependent dielectric</span><br></pre></td></tr></table></figure>
+
+<p>这一步产生构象需要较多时间，可以用事先准备好的pharm_confgen.maegz文件</p>
+<p>⑤    在<code>Ligands</code>中，<code>Pharm set</code>一栏中可以设置分子属于哪一集合，按照下图分类：</p>
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/4.jpg" style="zoom:50%;">
+
+<p>⑥    点击<code>Next</code>，创建每个小分子的药效团位点。从弹出的对话框中，选择所有五个药效团特征：<code>A、D、H、P、R</code>。点击对话框上的<code>Create Sites</code></p>
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/5.jpg" style="zoom:50%;">
+
+<p>⑦    点击<code>Find Common Pharmacophore</code>按钮，分析7个active小分子后，确定其共同药效团需要含有一个正电特征（P）和一个氢键供体特征（D）。改变参数如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Maximum number of sites: 5</span><br><span class="line">Minimum number of sites: 4</span><br></pre></td></tr></table></figure>
+
+<p>在<code>Feature frequencies</code>改变D的最小值为、P的最小值为1，这时发现Variant list由11减少为7</p>
+<p>⑧    <code>Find</code>——&gt;<code>Start</code>开始计算，点击<code>Score hypothesis</code>——&gt;<code>Score actives</code>——&gt;<code>Start</code>，等待上一步计算结束后，点击<code>Score inactives</code>，对inactives分子打分</p>
+<p>⑨    计算结束后点击<code>Rescore</code>，得到一个post-hoc打分（这里可以看Survival的数值），根据打分高低排列药效团，这里选择打分最高的一个药效团模型ADHPR.133</p>
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/6.jpg" style="zoom:50%;">
+
+<h2 id="3-基于药效团的数据库检索"><a href="#3-基于药效团的数据库检索" class="headerlink" title="3.基于药效团的数据库检索"></a>3.基于药效团的数据库检索</h2><p>①    选择ADHPR.133，点击右下方的<code>Search for Matches</code>，选择DrugBank_All_3D.sdf（上市和实验中的药物）和SPECS_2018_4.sdf（其他的普通化合物）</p>
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/7.jpg" style="zoom:50%;">
+
+<p>②    在<code>Searching</code>选项卡中，选中<code>Use existing confomers</code>，在<code>Matching</code>选项卡中<code>Must match on at least</code>改为3</p>
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/8.jpg" style="zoom:50%;">
+
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/9.jpg" style="zoom:50%;">
+
+<p>③    单击<code>Run</code>按钮开始筛选</p>
+<h1 id="四、实验结果"><a href="#四、实验结果" class="headerlink" title="四、实验结果"></a>四、实验结果</h1><p>计算结果显示，最终从DrugBank中获得打分最高的分子11688894，其Fitness得分为1.821972，从SPECS中获得打分最高的分子Fitness得分为1.912956</p>
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/11.jpg" style="zoom:50%;">
+
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/10.jpg" style="zoom:50%;">
+
+<p>我们可以查看他与药效团的匹配情况</p>
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/12.jpg" style="zoom:50%;">
+
+<img src="/2021/06/12/%E8%8D%AF%E6%95%88%E5%9B%A2%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A3%80%E7%B4%A2/13.jpg" style="zoom:50%;">
+
+
       
 
       
