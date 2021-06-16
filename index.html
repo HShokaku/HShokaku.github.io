@@ -153,60 +153,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h1><p>利用Schrödinger软件的Strike模块建立胸苷酸合成酶抑制剂的经典QSAR模型，并掌握QSAR分析的一般流程</p>
-<h1 id="二、实验材料"><a href="#二、实验材料" class="headerlink" title="二、实验材料"></a>二、实验材料</h1><p>188个胸苷酸合成酶抑制剂的结构、活性及理化性质数据<br>Schrödinger软件的Strike模块</p>
-<h1 id="三、实验过程"><a href="#三、实验过程" class="headerlink" title="三、实验过程"></a>三、实验过程</h1><h2 id="1-实验准备"><a href="#1-实验准备" class="headerlink" title="1.实验准备"></a>1.实验准备</h2><p>将188个胸苷酸合成酶抑制剂的结构、活性及理化性质数据拷贝至工作目录下并打开Maestro</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">%</span><span class="bash"> cp ~jgcheng/1.11/TS_ligands.maegz .</span></span><br><span class="line"><span class="meta">%</span><span class="bash"> maestro</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-建立QSAR模型"><a href="#2-建立QSAR模型" class="headerlink" title="2.建立QSAR模型"></a>2.建立QSAR模型</h2><h3 id="（1）导入数据结构"><a href="#（1）导入数据结构" class="headerlink" title="（1）导入数据结构"></a>（1）导入数据结构</h3><p>点击Maestro面板中的Import按钮打开Import面板，选择文件导入所有的分子数据</p>
-<img src="/2021/06/16/%E8%83%B8%E8%8B%B7%E9%85%B8%E5%90%88%E6%88%90%E9%85%B6%E6%8A%91%E5%88%B6%E5%89%82%E7%9A%84%E7%BB%8F%E5%85%B8QSAR%E5%88%86%E6%9E%90/1.jpg" style="zoom:50%;">
-
-<h3 id="（2）随机选定作为训练集的分子"><a href="#（2）随机选定作为训练集的分子" class="headerlink" title="（2）随机选定作为训练集的分子"></a>（2）随机选定作为训练集的分子</h3><p>打开Project Table面板，出现188个分子的所有条目，点击<code>Select</code>——&gt;<code>Random</code>，<code>Randomly select</code>栏选默认值50%（也可以选择其他数值，不同数目的训练集分子得到的QSAR精度也不同，这里第二次选择了75%），<code>From</code>选中<code>All entries（188）</code>，点击<code>Select</code></p>
-<img src="/2021/06/16/%E8%83%B8%E8%8B%B7%E9%85%B8%E5%90%88%E6%88%90%E9%85%B6%E6%8A%91%E5%88%B6%E5%89%82%E7%9A%84%E7%BB%8F%E5%85%B8QSAR%E5%88%86%E6%9E%90/2.jpg" style="zoom:50%;">
-
-<h3 id="（3）命名训练集"><a href="#（3）命名训练集" class="headerlink" title="（3）命名训练集"></a>（3）命名训练集</h3><p>点击项目表<code>Property</code>——&gt;<code>Add</code>，打开Add Property面板，<code>Name</code>栏输入<code>Train</code>，变量类型选择<code>String</code>，<code>Initial Value</code>输入<code>Training Set</code>，点击<code>ADD</code>，给训练集命名</p>
-<h3 id="（4）建立QSAR模型"><a href="#（4）建立QSAR模型" class="headerlink" title="（4）建立QSAR模型"></a>（4）建立QSAR模型</h3><p>点击<code>Application</code>——&gt;<code>Strike</code>——&gt;<code>Build QSAR Model</code>，打开Build QSAR Model面板，<code>Subset</code>选择All <code>properties</code>，Add——&gt;Shown将所有项添加至右侧，<code>#star</code>，<code>#rtvFG</code>，<code>CNS</code>，<code>QPlogBB</code>和<code>#metab</code>这五和描述符和分子结合无关，<code>Activity（-log[IC50]）</code>作为<code>Activity property</code>，选择这6个描述符，将其移回右侧。采用<code>Partial Least Squares（PLS）</code>方法，设置<code>Maxium number of factors</code>的数值为<code>20</code>，点击<code>run</code></p>
-<img src="/2021/06/16/%E8%83%B8%E8%8B%B7%E9%85%B8%E5%90%88%E6%88%90%E9%85%B6%E6%8A%91%E5%88%B6%E5%89%82%E7%9A%84%E7%BB%8F%E5%85%B8QSAR%E5%88%86%E6%9E%90/3.jpg" style="zoom:50%;">
-
-<img src="/2021/06/16/%E8%83%B8%E8%8B%B7%E9%85%B8%E5%90%88%E6%88%90%E9%85%B6%E6%8A%91%E5%88%B6%E5%89%82%E7%9A%84%E7%BB%8F%E5%85%B8QSAR%E5%88%86%E6%9E%90/4.jpg" style="zoom:50%;">
-
-<h3 id="（5）QSAR训练集模型的结果分析"><a href="#（5）QSAR训练集模型的结果分析" class="headerlink" title="（5）QSAR训练集模型的结果分析"></a>（5）QSAR训练集模型的结果分析</h3><p>选择Results表中的1.9结果进行作图分析。点击<code>Plot</code>从图中可以看出预测活性值和实验活性值吻合得较好</p>
-<img src="/2021/06/16/%E8%83%B8%E8%8B%B7%E9%85%B8%E5%90%88%E6%88%90%E9%85%B6%E6%8A%91%E5%88%B6%E5%89%82%E7%9A%84%E7%BB%8F%E5%85%B8QSAR%E5%88%86%E6%9E%90/5.jpg" style="zoom:50%;">
-
-<h2 id="3-用测试集检验所建QSAR模型的预测能力"><a href="#3-用测试集检验所建QSAR模型的预测能力" class="headerlink" title="3.用测试集检验所建QSAR模型的预测能力"></a>3.用测试集检验所建QSAR模型的预测能力</h2><h3 id="（1）建立测试集"><a href="#（1）建立测试集" class="headerlink" title="（1）建立测试集"></a>（1）建立测试集</h3><p>在之前选中训练集分子的情况下，点击<code>Select</code>——&gt;<code>invert</code>，将将剩余的分子选中作为测试集</p>
-<h3 id="（2）预测测试集中化合物的活性"><a href="#（2）预测测试集中化合物的活性" class="headerlink" title="（2）预测测试集中化合物的活性"></a>（2）预测测试集中化合物的活性</h3><p>在Build QSAR Model面板选中1.9预测模型，点击<code>Predict</code>按钮，点击<code>Run</code>开始计算</p>
-<img src="/2021/06/16/%E8%83%B8%E8%8B%B7%E9%85%B8%E5%90%88%E6%88%90%E9%85%B6%E6%8A%91%E5%88%B6%E5%89%82%E7%9A%84%E7%BB%8F%E5%85%B8QSAR%E5%88%86%E6%9E%90/6.jpg" style="zoom:50%;">
-
-<h1 id="四、实验结果"><a href="#四、实验结果" class="headerlink" title="四、实验结果"></a>四、实验结果</h1><p>想开项目表，点击<code>Plot</code>，<code>New Scatter Plot</code>新建一个图，<code>Rename</code>为<code>test-acvtivity</code>。X轴选择<code>Activity（-log[IC50]）</code>，Y轴选择<code>Activity（-log[IC50]）StrikePredicition（9）</code>下面依次为选择50%和75%的图片</p>
-<img src="/2021/06/16/%E8%83%B8%E8%8B%B7%E9%85%B8%E5%90%88%E6%88%90%E9%85%B6%E6%8A%91%E5%88%B6%E5%89%82%E7%9A%84%E7%BB%8F%E5%85%B8QSAR%E5%88%86%E6%9E%90/7.jpg" style="zoom:50%;">
-
-<img src="/2021/06/16/%E8%83%B8%E8%8B%B7%E9%85%B8%E5%90%88%E6%88%90%E9%85%B6%E6%8A%91%E5%88%B6%E5%89%82%E7%9A%84%E7%BB%8F%E5%85%B8QSAR%E5%88%86%E6%9E%90/8.jpg" style="zoom:50%;">
-
-<table>
-<thead>
-<tr>
-<th align="center">训练集占比</th>
-<th align="center">标准偏差s</th>
-<th align="center">相关系数r<sup>2</sup></th>
-<th align="center">检验值F</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">50%</td>
-<td align="center">0.496</td>
-<td align="center">0.788</td>
-<td align="center">33.5</td>
-</tr>
-<tr>
-<td align="center">75%</td>
-<td align="center">0.460</td>
-<td align="center">0.829</td>
-<td align="center">61.4</td>
-</tr>
-</tbody></table>
-<hr>
-<p>从实验数据和图片来看，选取75%的化合物作为训练集其预测活性和实验活性值更加吻合</p>
-<h1 id="五、心得与体会"><a href="#五、心得与体会" class="headerlink" title="五、心得与体会"></a>五、心得与体会</h1><p>实验过程中训练集和测试集的分配比会影响模型的预测能力。如果数据选取过多，会使模型过拟合导致预测性能变差，把一些噪声作为信号。通常来说，我们把训练集和测试集的比例为80：20，当然也可以加入验证集来提高模型的质量</p>
-
+        
+          <a class="article-more-a" href="/2021/06/16/%E8%83%B8%E8%8B%B7%E9%85%B8%E5%90%88%E6%88%90%E9%85%B6%E6%8A%91%E5%88%B6%E5%89%82%E7%9A%84%E7%BB%8F%E5%85%B8QSAR%E5%88%86%E6%9E%90/#more">more >></a>
+        
       
 
       
